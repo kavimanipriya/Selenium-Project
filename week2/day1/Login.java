@@ -1,5 +1,7 @@
 package week2.day1;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,7 +25,10 @@ public class Login {
 
 		// how to maximize the browser
 		driver.manage().window().maximize();
-
+		
+		//Implicit wait
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+				
 		// Get the title of the application
 
 		String title = driver.getTitle();

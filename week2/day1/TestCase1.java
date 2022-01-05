@@ -11,7 +11,6 @@ public class TestCase1 {
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
-
 		driver.get("http://leaftaps.com/opentaps/");
 		driver.manage().window().maximize();
 		WebElement userName = driver.findElement(By.id("username"));
@@ -22,13 +21,13 @@ public class TestCase1 {
 		driver.findElement(By.linkText("CRM/SFA")).click();
 		driver.findElement(By.linkText("Contacts")).click();
 		driver.findElement(By.linkText("Create Contact")).click();
-		driver.findElement(By.id("firstNameField")).sendKeys("Priya");
-		driver.findElement(By.id("lastNameField")).sendKeys("G");
+		driver.findElement(By.id("firstNameField")).sendKeys("Pranav1");
+		driver.findElement(By.id("lastNameField")).sendKeys("V");
 		driver.findElement(By.name("submitButton")).click();
 		
-		WebElement firstName= driver.findElement(By.id("firstNameField"));
-		firstName.sendKeys("Priya");
-		String firstNameValue = firstName.getAttribute("Value");
+		
+		WebElement firstName= driver.findElement(By.id("viewContact_firstName_sp"));
+		String firstNameValue = firstName.getText();
 		System.out.println(firstNameValue);
 		
 		String title = driver.getTitle();

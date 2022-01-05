@@ -23,7 +23,11 @@ public class TestCase2 {
 		driver.findElement(By.linkText("Contacts")).click();
 		driver.findElement(By.linkText("Find Contacts")).click();
 		
-		
+		driver.findElement(By.xpath("//span[contains(text(),'Email')]")).click();
+		driver.findElement(By.xpath("//label[contains(text(),'Email Address:')]")).click();
+		driver.findElement(By.xpath("//input[@name='emailAddress']")).sendKeys("babu@testleaf.com");
+		driver.findElement(By.linkText("Find Contacts")).click();
+		driver.close();
 
 	}
 
