@@ -41,7 +41,7 @@ public class Assignment1FbNewAccount {
 		Select y = new Select(year);
 		y.selectByVisibleText("1990");
 		
-		//Select the radio button "Female"( A normal click will do for this step) 
+		//Select the radio button "Female"
 		driver.findElement(By.xpath("//span[@data-type='radio']//label[text()='Female']/following-sibling::input[@name='sex']")).click();
 		
 	
