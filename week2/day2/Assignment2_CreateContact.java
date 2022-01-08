@@ -9,7 +9,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Assignment2_CreateContact {
 
-	static String updateButton = "//textarea[@id='updateContactForm_importantNote']/following::input[@value='Update']";
 	public static void main(String[] args) {
 
 		// * 1. Launch URL "http://leaftaps.com/opentaps/control/login"
@@ -72,15 +71,13 @@ public class Assignment2_CreateContact {
 
 		// * 18. Fill ImportantNote Field with Any text
 		driver.findElement(By.id("updateContactForm_importantNote")).sendKeys("Important Note to display");
-
-		// * 19. Click on update button using Xpath locator
-		driver.findElement(By.xpath(updateButton)).click();
+		
+		//19. Click on update button using Xpath locator
+		driver.findElement(By.xpath("//input[@class='smallSubmit']")).click();
 
 		// * 20. Get the Title of Resulting Page.
 		System.out.println("Title of the page is " + driver.getTitle());
 
 	}
 
-
 }
-
