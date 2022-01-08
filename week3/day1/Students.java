@@ -27,7 +27,7 @@ public class Students {
 		stdinfo.getStudentInfo(7);
 	
 		stdinfo.getStudentInfo(7,"Priya");
-		stdinfo.getStudentInfo("kavi@gmail.com",9994709881L);
+		stdinfo.getStudentInfo("kavi@gmail.com",8220857936L);
 		
 		
 		
