@@ -27,9 +27,7 @@ package week4.day2;
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 			
 			Actions builder = new Actions(driver);
-			
 			WebElement mensFashion = driver.findElement(By.xpath("//span[text()=\"Men's Fashion\"]"));
-			
 			WebElement shoes = driver.findElement(By.xpath("//span[text()='Sports Shoes']"));
 			
 			builder.moveToElement(mensFashion).pause(1000).click(shoes).perform();
@@ -52,17 +50,14 @@ package week4.day2;
 			driver.findElement(By.xpath("(//div[@class='sdCheckbox filters-list '])[5]")).click();
 			Thread.sleep(2000);
 			WebElement firstEle = driver.findElement(By.xpath("(//img[@class='product-image wooble'])[1]"));
-		
 			builder.moveToElement(firstEle).perform();
 			driver.findElement(By.xpath("(//div[contains(text(),'Quick View')])[1]")).click();
-
 			WebElement price = driver.findElement(By.xpath("//span[@class='payBlkBig']"));
 			String a = price.getText();
 			System.out.println("Price " + a);
 			WebElement dis = driver.findElement(By.xpath("//span[@class='percent-desc ']"));
 			String b = dis.getText();
 			System.out.println("Price" + b);
-			
 			WebElement ssImage = driver.findElement(By.xpath("(//img[@class='cloudzoom'])[1]"));
 			File source = ssImage.getScreenshotAs(OutputType.FILE);
 			File destination = new File("./Images/sportshoeImage.png");
