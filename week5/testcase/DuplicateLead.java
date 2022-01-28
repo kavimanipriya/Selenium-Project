@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class DuplicateLead {
+public class DuplicateLead extends BaseClass {
 @Test
 	public  void duplicateLead() throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
